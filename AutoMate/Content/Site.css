@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #c1dee2;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -45,7 +46,7 @@ textarea {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #034488;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -63,7 +64,7 @@ textarea {
     }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #7090cb;
 }
 
 input:focus + .slider {
@@ -91,6 +92,13 @@ input:checked + .slider:before {
 
 
 
- #TripForm{
+.CenterMe {
+    margin: 0 auto;
+    width: 80%;
+    padding: 10%;
+}
 
- }
+.navbar {
+    background-color: #234a56;
+    color: black;
+}

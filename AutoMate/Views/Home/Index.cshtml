@@ -18,33 +18,38 @@
         </div>
     </section>
 </div>
-<div class="row">
-    <section class="col-sm-6" id="TripForm">
-        <div class="row h-75 justify-content-center align-items-center">
+<div class="container-fluid h-100">
+<div class="row justify-content-center align-items-center container">
+    <section class="CenterMe">
+        <div class="">
+            
             <form id="RideForm" action="/" enctype="text/plain" class="text-center">
-                <div class="form-group row">
+                <div class="form-group row text-center">
                     <label class="col-sm-3" for="CurrentLocation">Current Location</label>
                     <input type="text" class="form-control" id="CurrentLocation" name="CurrentLocation"
                            required=true>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row text-center">
                     <label class="col-sm-3" for="Destination">Destination</label>
                     <input type="text" class="form-control" id="Destination" name="Destination"
                            required=true>
                 </div>
 
-                <div class="form-group row">
+                <div class="form-group row text-center">
                     <label class="col-sm-3" for="Time">Time</label>
-                    <input type="text" class="form-control" id="Time" name="Time"
+                    <input type="datetime" class="form-control" id="Time" name="Time"
                            required=true>
                 </div>
-                <button type="submit" class="btn btn-success" value="Send">Submit</button>
+                
+                    <button type="submit" class="btn btn-primary " value="Send">Submit</button>
+                   
             </form>
         </div>
 </section>
    
 
 </div>
+    </div>
  
 
 
