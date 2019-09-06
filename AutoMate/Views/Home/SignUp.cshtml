@@ -1,7 +1,7 @@
 ﻿@model AutoMate.Models.UserModel
 
 @{
-    ViewBag.Title = "SignUp";
+    ViewBag.Title = "User Registration";
 }
 
 <h2>SignUp</h2>
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>UserModel</h4>
+        <h4>Resgister a new user for AutoMate by entering the following details:</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
