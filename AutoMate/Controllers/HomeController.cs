@@ -5,8 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-//Testing commit - Jesse again
-
 namespace AutoMate.Controllers
 {
     public class HomeController : Controller
@@ -45,6 +43,13 @@ namespace AutoMate.Controllers
             {
                 return RedirectToAction("Index");
             }
+
+            return View();
+        }
+
+        public ActionResult ProfilePage()
+        {
+            ViewBag.Message = "Profile Page";
 
             return View();
         }
