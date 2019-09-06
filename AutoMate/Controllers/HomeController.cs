@@ -28,5 +28,12 @@ namespace AutoMate.Controllers
 
             return View();
         }
+
+        public ActionResult SignUp()
+        {
+            ViewBag.Message = "User sign up page";
+
+            return View();
+        }
     }
 }
