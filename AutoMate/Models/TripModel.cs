@@ -12,14 +12,14 @@ namespace AutoMate.Models
 
 public class Trip {
 
-    public int MyProperty { get; set; }
-    private int UserID { get; set; };
-    private int StartLat { get; set; };
-    private int StartLong { get; set; }; 
-    private int EndLat { get; set; };
-    private int EndLong { get; set; };
-    private DateTime StartTime { get; set; };
-    private DateTime EndTime { get; set; };
+    
+    private int UserID { get; set; }
+    private Double StartLat { get; set; }
+    private Double StartLong { get; set; }
+    private Double EndLat { get; set; }
+    private Double EndLong { get; set; }
+    private DateTime StartTime { get; set; }
+    private DateTime EndTime { get; set; }
     
 
 }
