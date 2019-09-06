@@ -7,5 +7,8 @@ namespace AutoMate.Models
 {
     public class branch_test
     {
+
+        public int MyProperty { get; set; }
+
     }
 }
