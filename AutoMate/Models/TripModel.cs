@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 // Model for Trip
 
-namespace AutoMate.Controllers
+namespace AutoMate.Models
 {
 
 public class Trip {
