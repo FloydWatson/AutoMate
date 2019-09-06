@@ -53,5 +53,12 @@ namespace AutoMate.Controllers
 
             return View();
         }
+
+        public ActionResult EditUserDetails()
+        {
+            ViewBag.Message = "Edit Details";
+
+            return View();
+        }
     }
 }
