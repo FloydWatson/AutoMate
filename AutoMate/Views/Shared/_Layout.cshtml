@@ -18,11 +18,12 @@
                 </button>
                 @Html.ActionLink("AutoMate", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse justify-content-end">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Sign in/Profile", "SignIn", "SignIn")</li>
                 </ul>
             </div>
         </div>

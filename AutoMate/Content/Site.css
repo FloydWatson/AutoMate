@@ -102,3 +102,12 @@ input:checked + .slider:before {
     background-color: #234a56;
     color: black;
 }
+
+.card {
+    background-color: #fffcf6;
+ 
+}
+
+#Map{
+    margin:1em;
+}
