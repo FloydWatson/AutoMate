@@ -57,6 +57,7 @@ namespace AutoMate.Controllers
             UserModel data = new UserModel();
             data.Username = "FloydWatson";
             data.GivenName = "Floyd";
+            data.EmailAddress = "Floyd@gmail.com";
             
             
 
