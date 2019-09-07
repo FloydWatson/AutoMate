@@ -1,0 +1,32 @@
+﻿@model AutoMate.Models.Location
+
+<!DOCTYPE html>
+<html>
+<body>
+
+    @using (Html.BeginForm("Index", "Map", FormMethod.Post))
+    {
+        <input type="text" id="lat" name="lat" value="test" />
+        <input type="text" id="lon" name="lon" value="test" />
+        <input type="submit" value="Submit" />
+    }
+
+    <script>
+        
+
+        function getLocation() {
+            navigator.geolocation.getCurrentPosition(setPosition);
+        }
+
+        function setPosition(position) {
+            console.log(position.coords)
+            document.getElementById("lat").value = position.coords.latitude
+            document.getElementById("lon").value = position.coords.longitude
+        }
+
+
+        getLocation()
+    </script>
+
+</body>
+</html>

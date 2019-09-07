@@ -15,21 +15,9 @@ namespace AutoMate.Controllers
 {
     public class HomeController : Controller
     {
-        private TransportAPI transportApi;
-        private List<BusStop> busstops;
-
-        public string Index()
+        public ActionResult Index()
         {
-            var transportApi = new TransportAPI();
-            var serializer = new JavaScriptSerializer();
-            var busStops = Task.Run(async () => { return await transportApi.MyBusStopAPI.getBusStopByDistanceAsync(); }).Result;
-
-            if (busStops != null)
-            {
-                return JsonConvert.SerializeObject(busStops); 
-
-            }
-            return null;
+            return View();
         }
 
         public ActionResult About()

@@ -19,5 +19,8 @@ namespace AutoMate.Models
 
         [JsonProperty(PropertyName = "stop_lon")]
         public string stop_lon { get; set; }
+
+        [JsonProperty(PropertyName = "location_type")]
+        public string location_type { get; set; }
     }
 }

@@ -24,10 +24,10 @@ namespace AutoMate.Models
         }
 
         // Call with optional lat, lng, and distance parameters
-        public async Task<List<BusStop>> getBusStopByDistanceAsync(string lat = "-36.84", string lng = "174.76", string distance = "500")
+        public async Task<List<BusStop>> getBusStopByDistanceAsync(string lat = "-36.84", string lng = "174.76", string distance = "1000")
         {
             var callback = "";
-            var searchByDistanceURL = $"https://api.at.govt.nz/v2/gtfs/stops?%2Fgeosearch%3Flat={lat}&lng={lng}&distance={distance}&fbclid=IwAR1zPIVdK634-I4CuvzxT51FE9ZhDvR25PDm0HbvB5eOCAJr8wjBemQHj5M";
+            var searchByDistanceURL = $"https://api.at.govt.nz/v2/gtfs/stops/geosearch?lat=" + lat + "&lng=" + lng + "&distance=" + distance + "&fbclid=IwAR1zPIVdK634-I4CuvzxT51FE9ZhDvR25PDm0HbvB5eOCAJr8wjBemQHj5M";
             var queryString = HttpUtility.ParseQueryString(string.Empty);
         
             // Request parameters
