@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-//Testing commit - Jesse
+//Testing commit - Jesse 
 
 namespace AutoMate.Controllers
 {
@@ -12,6 +12,10 @@ namespace AutoMate.Controllers
     {
         public ActionResult Index()
         {
+            transportApi = new TransportAPI();
+            return transportApi.MyBusStopAPI.queryBusStops("bus_stop=Papakura Train Station");
+            
+
             return View();
         }
 
@@ -28,5 +32,7 @@ namespace AutoMate.Controllers
 
             return View();
         }
+
+
     }
 }
