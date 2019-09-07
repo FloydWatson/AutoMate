@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMate", "AutoMate\AutoMate.csproj", "{30508ACB-2AC1-48EF-81BE-B7354A4DE0CD}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AutoMateDB", "AutoMateDB\AutoMateDB.sqlproj", "{8887FB7E-726E-4DD5-AF81-C776185BEE27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{30508ACB-2AC1-48EF-81BE-B7354A4DE0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30508ACB-2AC1-48EF-81BE-B7354A4DE0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30508ACB-2AC1-48EF-81BE-B7354A4DE0CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8887FB7E-726E-4DD5-AF81-C776185BEE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8887FB7E-726E-4DD5-AF81-C776185BEE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8887FB7E-726E-4DD5-AF81-C776185BEE27}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8887FB7E-726E-4DD5-AF81-C776185BEE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8887FB7E-726E-4DD5-AF81-C776185BEE27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8887FB7E-726E-4DD5-AF81-C776185BEE27}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
