@@ -1,10 +1,11 @@
-﻿using System;
+﻿using AutoMate.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-//Testing commit - Jesse
+using static AutoMate.DBFunctions.UserProcessor;
 
 namespace AutoMate.Controllers
 {
@@ -28,5 +29,64 @@ namespace AutoMate.Controllers
 
             return View();
         }
+
+        public ActionResult SignUp()
+        {
+            ViewBag.Message = "User sign up page";
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult SignUp(UserModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                CreateUser(model);
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
+       
+        public ActionResult ProfilePage()
+        {
+            ViewBag.Message = "Profile Page";
+            UserModel data = new UserModel();
+            data.Username = "FloydWatson";
+            data.GivenName = "Floyd";
+            
+            
+
+            return View(data);
+        }
+
+        public ActionResult EditUserDetails()
+        {
+            ViewBag.Message = "Edit Details";
+
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            ViewBag.Message = "Login";
+
+            return View();
+        }
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult EditUserDetails(UserModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        return RedirectToAction("Index");
+        //    }
+
+        //    return View();
+        //}
     }
 }

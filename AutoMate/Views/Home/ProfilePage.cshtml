@@ -1,0 +1,98 @@
+﻿@model AutoMate.Models.UserModel
+
+@{
+    ViewBag.Title = "ProfilePage";
+}
+
+<h2>ProfilePage</h2>
+
+<div>
+    <h4>UserModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GivenName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GivenName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FamilyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FamilyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmEmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConfirmEmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DriverVerification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DriverVerification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Verification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Verification)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
