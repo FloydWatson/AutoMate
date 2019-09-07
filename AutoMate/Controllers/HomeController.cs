@@ -78,6 +78,19 @@ namespace AutoMate.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditUserDetails(UserModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("ProfilePage");
+            }
+
+            return View();
+        }
+
         public ActionResult Dashboard()
         {
             ViewBag.Message = "Your dashboard page.";
@@ -97,18 +110,6 @@ namespace AutoMate.Controllers
         public ActionResult Login(UserModel model)
         {
             return RedirectToAction("ProfilePage");
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult EditUserDetails(UserModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                return RedirectToAction("Index");
-            }
-
-            return View();
         }
     }
 }
