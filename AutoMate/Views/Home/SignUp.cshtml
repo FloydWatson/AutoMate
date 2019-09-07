@@ -1,4 +1,6 @@
 ﻿@model AutoMate.Models.UserModel
+<br />
+<br>
 
 @{
     ViewBag.Title = "User Registration";
@@ -7,10 +9,10 @@
 <h2>User Registration</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Resgister a new user for AutoMate by entering the following details:</h4>
         <hr />

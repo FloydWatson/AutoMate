@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-using static AutoMate.DBFunctions.UserProcessor;
+//using static AutoMate.DBFunctions.UserProcessor;
 
 namespace AutoMate.Controllers
 {
@@ -43,7 +43,7 @@ namespace AutoMate.Controllers
         {
             if (ModelState.IsValid)
             {
-                CreateUser(model);
+                //CreateUser(model);
                 return RedirectToAction("Index");
             }
 
