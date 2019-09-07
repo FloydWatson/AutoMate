@@ -731,6 +731,8 @@
         }).addTo(map);
 
 
+        //L.marker([-36.84, 174.76]).addTo(map);
+
         for (var i = 0; i < data.response.length; i++) {
             L.marker([data.response[i].stop_lat, data.response[i].stop_lon]).addTo(map);
         }
