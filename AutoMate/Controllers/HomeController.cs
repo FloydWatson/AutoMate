@@ -94,5 +94,10 @@ namespace AutoMate.Controllers
 
         //    return View();
         //}
+
+        public ActionResult ChartView()
+        {
+            return View();
+        }
     }
 }
