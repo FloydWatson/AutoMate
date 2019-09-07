@@ -16,12 +16,12 @@ namespace AutoMate.DBFunctions
             return ConfigurationManager.ConnectionStrings[connectionName].ConnectionString;
         }
 
-        public static List<T> LoadData<T>(string sql) // t is the model of the data
+        public static List<T> LoadData<T>(string sql) 
         {
             using (IDbConnection cnn = new SqlConnection(GetConnectionString()))
             {
                 
-                return cnn.Query<T>(sql).ToList(); // actually IEnum origianlly
+                return cnn.Query<T>(sql).ToList();
             }
         }
 

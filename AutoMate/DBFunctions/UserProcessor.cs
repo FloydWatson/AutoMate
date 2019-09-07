@@ -10,22 +10,18 @@ namespace AutoMate.DBFunctions
 {
     public static class UserProcessor
     {
-       public static int CreateUser(UserModel user)
+       public static int CreateUser(UserModel user)//int UserID,string GivenName, string FamilyName, string MobileNumber, string EmailAddress, string Verification, string UserName, string Rating)
         {
-            
-            if (user.DriverVerification)
-            {
-                user.Verification = 1;
-            } else
-            {
-                user.Verification = 0;
-            }
 
-            string sql = sql = @"insert into dbo.Employee (user_id, given_name, family_name, mobile_number, email_address, driver_verification, userUserName, rating)
-                            values (@user.UserID, @user.GivenName, @user.FamilyName, @user.MobileNumber, @user.EmailAddress, @verification, @user.UserName, @user.Rating);";
+            user.Verification = 1;
+        
+
+
+            string sql = sql = @"insert into dbo.user_profile (user_id, given_name, family_name, mobile_number, email_address, driver_verification, user_Name, rating)
+                            values (@UserID, @GivenName, @FamilyName, @MobileNumber, @EmailAddress, @Verification, @UserName, @Rating);";
             return SqlDataAccess.SaveData(sql, user);
         }
     }
-        
-        
+    //1,'test','test','test','test',1,'test',1
+    //
 }

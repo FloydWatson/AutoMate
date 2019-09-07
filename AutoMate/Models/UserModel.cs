@@ -39,7 +39,7 @@ namespace AutoMate.Models
         [Required(ErrorMessage = "You need to provide a username")]
         public string Username { get; set; }
 
-        public double Rating { get; set; }
+        public float Rating { get; set; }
 
         public int Verification { get; set; }
 
