@@ -1,8 +1,13 @@
-﻿using System;
+﻿using AutoMate.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 //Testing commit - Jesse 
 
@@ -10,13 +15,21 @@ namespace AutoMate.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
-        {
-            transportApi = new TransportAPI();
-            return transportApi.MyBusStopAPI.queryBusStops("bus_stop=Papakura Train Station");
-            
+        private TransportAPI transportApi;
+        private List<BusStop> busstops;
 
-            return View();
+        public string Index()
+        {
+            var transportApi = new TransportAPI();
+            var serializer = new JavaScriptSerializer();
+            var busStops = Task.Run(async () => { return await transportApi.MyBusStopAPI.getBusStopByDistanceAsync(); }).Result;
+
+            if (busStops != null)
+            {
+                return JsonConvert.SerializeObject(busStops); 
+
+            }
+            return null;
         }
 
         public ActionResult About()
