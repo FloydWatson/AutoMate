@@ -50,11 +50,15 @@ namespace AutoMate.Controllers
             return View();
         }
 
+       
         public ActionResult ProfilePage()
         {
             ViewBag.Message = "Profile Page";
+            UserModel data = LoadUser("Floyd");
+            
+            
 
-            return View();
+            return View(data);
         }
 
         public ActionResult EditUserDetails()
