@@ -41,11 +41,20 @@ namespace AutoMate.Models
         [Required(ErrorMessage = "You need to provide a username")]
         public string Username { get; set; }
 
-        public double Rating { get; set; }
+        public double Rating { get; set; } = 0;
 
         //public bool LoginStatus { get; set; }
 
         //public Image ProfilePicture { get; set; }
 
+        public UserModel(string GivenName, string FamilyName, string MobileNumber, string EmailAddress, int UserID, string Username)
+        {
+            this.GivenName = GivenName;
+            this.FamilyName = FamilyName;
+            this.MobileNumber = MobileNumber;
+            this.EmailAddress = EmailAddress;
+            this.UserID = UserID;
+            this.UserID = UserID;
+        }
     }
 }

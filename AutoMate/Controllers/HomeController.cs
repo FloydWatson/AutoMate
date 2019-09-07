@@ -60,5 +60,24 @@ namespace AutoMate.Controllers
 
             return View();
         }
+
+        public ActionResult Login()
+        {
+            ViewBag.Message = "Login";
+
+            return View();
+        }
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult EditUserDetails(UserModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        return RedirectToAction("Index");
+        //    }
+
+        //    return View();
+        //}
     }
 }
