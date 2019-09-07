@@ -54,7 +54,9 @@ namespace AutoMate.Controllers
         public ActionResult ProfilePage()
         {
             ViewBag.Message = "Profile Page";
-            UserModel data = LoadUser("Floyd");
+            UserModel data = new UserModel();
+            data.Username = "FloydWatson";
+            data.GivenName = "Floyd";
             
             
 
