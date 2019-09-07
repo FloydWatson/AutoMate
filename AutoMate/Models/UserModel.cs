@@ -41,5 +41,7 @@ namespace AutoMate.Models
 
         public double Rating { get; set; }
 
+        public int Verification { get; set; }
+
     }
 }
