@@ -100,7 +100,7 @@ input:checked + .slider:before {
 
 .navbar {
     background-color: #034488;
-    color: black;
+    
 }
 
 .card {
@@ -118,4 +118,8 @@ iframe{
 
 #Options{
     margin-right:1em;
+}
+
+.navbar-collapse .collapse .navbar-right li{
+    color:#fffcf6;
 }
