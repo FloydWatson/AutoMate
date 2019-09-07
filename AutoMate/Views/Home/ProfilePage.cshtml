@@ -4,12 +4,22 @@
     ViewBag.Title = "ProfilePage";
 }
 
-<h2>ProfilePage</h2>
+<h2>Profile Page</h2>
 
 <div>
-    <h4>UserModel</h4>
+    <h4>
+        Profile details for user: @Html.DisplayFor(model => model.Username)
+    </h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.GivenName)
         </dt>
@@ -43,35 +53,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ConfirmEmailAddress)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ConfirmEmailAddress)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UserID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UserID)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.DriverVerification)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.DriverVerification)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Username)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Username)
         </dd>
 
         <dt>
@@ -82,17 +68,9 @@
             @Html.DisplayFor(model => model.Rating)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Verification)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Verification)
-        </dd>
-
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "EditUserDetails", "Home") |
+    @Html.ActionLink("Back to home page", "Index")
 </p>
