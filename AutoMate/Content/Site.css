@@ -72,9 +72,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(520%);
-    -ms-transform: translateX(520%);
-    transform: translateX(520%);
+    -webkit-transform: translateX(530%);
+    -ms-transform: translateX(530%);
+    transform: translateX(530%);
 }
 
 /* Rounded sliders */
@@ -122,4 +122,11 @@ iframe{
 
 .navbar-collapse .collapse .navbar-right li{
     color:#fffcf6;
+}
+
+
+.navbar-brand img{
+    width:4em;
+    height: 4em;
+    
 }
