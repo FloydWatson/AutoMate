@@ -162,7 +162,6 @@
     </Compile>
     <Compile Include="Models\BusStop.cs" />
     <Compile Include="Models\BusStopAPI.cs" />
-    <Compile Include="Models\BusStops.cs" />
     <Compile Include="Models\TransportAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -210,7 +209,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
