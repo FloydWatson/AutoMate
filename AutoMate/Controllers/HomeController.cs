@@ -1,10 +1,9 @@
-﻿using System;
+﻿using AutoMate.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
-//Testing commit - Jesse again
 
 namespace AutoMate.Controllers
 {
@@ -32,6 +31,32 @@ namespace AutoMate.Controllers
         public ActionResult SignUp()
         {
             ViewBag.Message = "User sign up page";
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult SignUp(UserModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
+        public ActionResult ProfilePage()
+        {
+            ViewBag.Message = "Profile Page";
+
+            return View();
+        }
+
+        public ActionResult EditUserDetails()
+        {
+            ViewBag.Message = "Edit Details";
 
             return View();
         }

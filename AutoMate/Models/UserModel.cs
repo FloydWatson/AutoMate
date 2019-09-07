@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 
@@ -34,12 +35,17 @@ namespace AutoMate.Models
         [Display(Name = "User ID")]
         public int UserID { get; set; }
 
+        [Display(Name = "Driver Verified")]
         public bool DriverVerification { get; set; } = true;
 
         [Required(ErrorMessage = "You need to provide a username")]
         public string Username { get; set; }
 
         public double Rating { get; set; }
+
+        //public bool LoginStatus { get; set; }
+
+        //public Image ProfilePicture { get; set; }
 
     }
 }
