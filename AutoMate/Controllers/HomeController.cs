@@ -1,7 +1,6 @@
 ﻿using AutoMate.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using AutoMate.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +8,6 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
-
-using static AutoMate.DBFunctions.UserProcessor;
 
 namespace AutoMate.Controllers
 {
@@ -48,7 +45,6 @@ namespace AutoMate.Controllers
         {
             if (ModelState.IsValid)
             {
-                CreateUser(model);
                 return RedirectToAction("Index");
             }
 
