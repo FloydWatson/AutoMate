@@ -1,4 +1,5 @@
-# AutoMate A App to calculate your carbon footprint and to encourage alternate
+# AutoMate 
+A App to calculate your carbon footprint and to encourage alternate
 
 # Team Name
 
