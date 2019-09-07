@@ -18,20 +18,36 @@ namespace AutoMate.DBFunctions
 
 
             string sql = sql = @"insert into dbo.user_profile (user_id, given_name, family_name, mobile_number, email_address, driver_verification, user_Name, rating)
-                            values (@UserID, @GivenName, @FamilyName, @MobileNumber, @EmailAddress, @Verification, @UserName, @Rating);";
+                            values (@UserID, @GivenName, @FamilyName, @MobileNumber, @EmailAddress, @Verification, @Username, @Rating);";
             return SqlDataAccess.SaveData(sql, user);
         }
 
         public static UserModel LoadUser(string userName)
         {
-            string sql = @"select user_id, given_name, family_name, mobile_number, email_address, driver_verification, user_Name, rating
-                            from dbo.user_profile WHERE user_name = @userName;";
+            UserModel data = new UserModel();
+            data.Username = userName;
 
-            return SqlDataAccess.LoadData<UserModel>(sql);
+            string sql = @"SELECT user_id, given_name, family_name, mobile_number, email_address, driver_verification, user_name, rating from dbo.user_profile
+                    WHERE user_id = 2";
+
+            List<UserModel> userList = SqlDataAccess.LoadData<UserModel>(sql);
+            foreach (var user in userList)
+            {
+                if (user.Username != null)
+                {
+                    UserModel test = new UserModel();
+                    test.GivenName = user.GivenName;
+                    return test;
+                }
+
+            }
+
+            return null;
         }
 
 
     }
     //1,'test','test','test','test',1,'test',1
-    //
+    //select user_id, given_name, family_name, mobile_number, email_address, driver_verification, user_Name, rating
+    //from dbo.user_profile WHERE user_name = @UserName;
 }

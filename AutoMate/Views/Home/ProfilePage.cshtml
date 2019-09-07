@@ -4,10 +4,10 @@
     ViewBag.Title = "ProfilePage";
 }
 
-<h2>Profile Page</h2>
+<h2>ProfilePage</h2>
 
 <div>
-    <h4>Profile details for user: @Html.DisplayFor(model => model.Username)</h4>
+    <h4>UserModel</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -41,6 +41,10 @@
         <dd>
             @Html.DisplayFor(model => model.EmailAddress)
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConfirmEmailAddress)
+        </dt>
 
         <dd>
             @Html.DisplayFor(model => model.ConfirmEmailAddress)
@@ -78,9 +82,17 @@
             @Html.DisplayFor(model => model.Rating)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Verification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Verification)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "EditUserDetails", "Home") |
-    @Html.ActionLink("Back to home page", "Index")
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>
