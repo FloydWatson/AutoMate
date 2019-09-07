@@ -97,7 +97,11 @@ input:checked + .slider:before {
     width: 80%;
     padding: 10%;
 }
-
+.CenterMe input{
+    
+    right: 0;
+   
+}
 .navbar {
     background-color: #034488;
     
