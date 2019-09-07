@@ -12,6 +12,10 @@ namespace AutoMate.Controllers
     {
         public ActionResult Index()
         {
+            transportApi = new TransportAPI();
+            return transportApi.MyBusStopAPI.queryBusStops("bus_stop=Papakura Train Station");
+            
+
             return View();
         }
 
@@ -28,5 +32,7 @@ namespace AutoMate.Controllers
 
             return View();
         }
+
+
     }
 }
