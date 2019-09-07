@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Net.Http;
+using System.Web.Script.Serialization;
 
 namespace AutoMate.Models
 {
@@ -24,7 +25,7 @@ namespace AutoMate.Models
         }
 
         // Query string format eg: "stop_name=Papakura Train Station"
-        public BusStop[] queryBusStops(string query, string callback = "")
+        public async System.Threading.Tasks.Task<BusStops> queryBusStopsAsync(string query, string callback = "")
         {
             
             var queryString = HttpUtility.ParseQueryString(string.Empty);
@@ -32,7 +33,7 @@ namespace AutoMate.Models
             // Check if user submitted query string
             if (!string.IsNullOrEmpty(query))
             {
-                queryString = Query;
+                queryString = HttpUtility.ParseQueryString(query);
             }
 
             // Request headers
@@ -42,10 +43,13 @@ namespace AutoMate.Models
             queryString["callback"] = callback;
             var uri = APIURL + queryString;
 
-            var response = await client.GetAsync(uri);
+            var response = await Client.GetAsync(uri);
 
             // Deserialize and put into array of BusStop classes
-            BusStop BusStopList = JsonConvert.DeserializeObject<BusStops>(response.Content);
+            var serializer = new JavaScriptSerializer();
+            BusStops BusStopList = serializer.Deserialize<BusStops>(response.Content.ReadAsStringAsync().Result);
+
+
 
             return BusStopList;
         }

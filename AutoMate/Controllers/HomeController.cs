@@ -1,8 +1,10 @@
-﻿using System;
+﻿using AutoMate.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 //Testing commit - Jesse 
 
@@ -10,13 +12,18 @@ namespace AutoMate.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private TransportAPI transportApi;
+
+        public object Output { get; private set; }
+
+        public String Index()
         {
-            transportApi = new TransportAPI();
-            return transportApi.MyBusStopAPI.queryBusStops("bus_stop=Papakura Train Station");
+            var serializer = new JavaScriptSerializer();
+            var serializedResult = serializer.Serialize(transportApi.MyBusStopAPI.queryBusStopsAsync("bus_stop=Papakura Train Station"));
+            return serializedResult;
             
 
-            return View();
+            // return View();
         }
 
         public ActionResult About()
