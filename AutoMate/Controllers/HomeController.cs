@@ -26,7 +26,7 @@ namespace AutoMate.Controllers
 
             if (busStops != null)
             {
-                //return JsonConvert.SerializeObject(busStops); 
+                return JsonConvert.SerializeObject(busStops); 
 
             }
             return null;
