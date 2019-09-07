@@ -94,7 +94,7 @@ input:checked + .slider:before {
 
 .CenterMe {
     margin: 0 auto;
-    width: 80%;
+    width: 73%;
     padding: 10%;
 }
 .CenterMe input{
@@ -112,7 +112,7 @@ input:checked + .slider:before {
     color: #034488;
 }
 
-#Map{
+#MapArea{
     margin:1em;
 }
 
@@ -133,4 +133,8 @@ iframe{
     width:4em;
     height: 4em;
     
+}
+
+#RideForm button{
+    margin-top: 2em;
 }
