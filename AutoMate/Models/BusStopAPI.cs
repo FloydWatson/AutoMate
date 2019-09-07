@@ -14,68 +14,55 @@ namespace AutoMate.Models
         public string PrimaryKey { get; set; }
         public string SecondaryKey { get; set; }
         private HttpClient Client;
-        private string APIURL;
 
         public BusStopAPI(string primaryKey, string secondaryKey)
         {
             this.PrimaryKey = primaryKey;
             this.SecondaryKey = secondaryKey;
             this.Client = new HttpClient();
-
             Client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", PrimaryKey);
-
-            APIURL = "https://api.at.govt.nz/v2/gtfs/stops/stopId/0097-20190819140255_v83.2?";
         }
 
-        // Query string format eg: "stop_name=Papakura Train Station"
-        public async Task<List<BusStop>> queryBusStopsAsync(string query, string callback = "")
+        // Call with optional lat, lng, and distance parameters
+        public async Task<List<BusStop>> getBusStopByDistanceAsync(string lat = "-36.84", string lng = "174.76", string distance = "500")
         {
-            
+            var callback = "";
+            var searchByDistanceURL = $"https://api.at.govt.nz/v2/gtfs/stops?%2Fgeosearch%3Flat={lat}&lng={lng}&distance={distance}&fbclid=IwAR1zPIVdK634-I4CuvzxT51FE9ZhDvR25PDm0HbvB5eOCAJr8wjBemQHj5M";
             var queryString = HttpUtility.ParseQueryString(string.Empty);
-
-            // Check if user submitted query string
-            if (!string.IsNullOrEmpty(query))
-            {
-                queryString = HttpUtility.ParseQueryString(query);
-            }
-
-            // Request headers
-            var httpclient = new HttpClient();
-
-            httpclient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "a546a8c00a9d40378f95b13c288f6aa6");
-
+        
             // Request parameters
             queryString["callback"] = callback;
-            var uri = APIURL + queryString;
+            var uri = searchByDistanceURL + queryString;
 
-            var response = Task.Run(async () => { return await httpclient.GetAsync(uri); }).Result;
+            var response = Task.Run(async () => { return await Client.GetAsync(uri); }).Result;
             response.EnsureSuccessStatusCode();
+
             // Deserialize and put into array of BusStop classes
             var serializer = new JavaScriptSerializer();
             var json = Task.Run(async () => { return await response.Content.ReadAsStringAsync(); }).Result;
             
+            // Check if no entries found with query
             if (!string.IsNullOrEmpty(json))
             {
-                var result = JObject.Parse(json);   //parses entire stream into JObject, from which you can use to query the bits you need.
-                var items = result["response"].Children().ToList();   //Get the sections you need and save as enumerable (will be in the form of JTokens)
+                // Put status, response, and error into object to pull out individual response objects (eg: list of bus stops)
+                var responseObject = JObject.Parse(json);
+                var responseItemList = responseObject["response"].Children().ToList();
 
-                List<BusStop> busstopList = new List<BusStop>();  //init new list to store the objects.
+                // Create bus stop list
+                List<BusStop> busStopList = new List<BusStop>();  //init new list to store the objects.
 
-                //iterate through the list and match to an object. If Property names don't match -- you could also map the properties individually. Also useful if you need to dig out nested properties.
-                foreach (var subItem in items)
+                // Iterate through response item list and put into a bus stop list
+                foreach (var items in responseItemList)
                 {
-                    BusStop busstop = subItem.ToObject<BusStop>();
-                    busstopList.Add(busstop);
+                    BusStop busStop = items.ToObject<BusStop>();
+                    busStopList.Add(busStop);
                 }
-                // JsonResponse FullJsonResponse = serializer.Deserialize<JsonResponse>(json);
 
-
-                return busstopList;
+                // Return list of bus stop objects that matched query
+                return busStopList;
             }
 
             return null;
-            
-        }
-        
+         }
     }
 }

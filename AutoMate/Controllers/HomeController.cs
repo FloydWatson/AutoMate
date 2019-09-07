@@ -1,4 +1,6 @@
 ﻿using AutoMate.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,28 +18,18 @@ namespace AutoMate.Controllers
         private TransportAPI transportApi;
         private List<BusStop> busstops;
 
-        public object Output { get; private set; }
-
         public string Index()
         {
             var transportApi = new TransportAPI();
             var serializer = new JavaScriptSerializer();
-            var busstops = Task.Run(async () => { return await transportApi.MyBusStopAPI.queryBusStopsAsync("", ""); }).Result;
+            var busStops = Task.Run(async () => { return await transportApi.MyBusStopAPI.getBusStopByDistanceAsync(); }).Result;
 
-            if (busstops != null)
+            if (busStops != null)
             {
-
-
-                foreach (var el in busstops)
-                    Console.WriteLine(el.stop_id);
-
+                //return JsonConvert.SerializeObject(busStops); 
 
             }
-
             return null;
-            
-
-            // return View();
         }
 
         public ActionResult About()

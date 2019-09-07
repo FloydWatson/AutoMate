@@ -157,7 +157,6 @@
     </Compile>
     <Compile Include="Models\BusStop.cs" />
     <Compile Include="Models\BusStopAPI.cs" />
-    <Compile Include="Models\JsonResponse.cs" />
     <Compile Include="Models\TransportAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
