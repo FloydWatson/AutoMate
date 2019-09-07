@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #c1dee2;
+    background-color: #fffcf6;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -64,7 +64,7 @@ textarea {
     }
 
 input:checked + .slider {
-    background-color: #7090cb;
+    background-color: #94ebd8;
 }
 
 input:focus + .slider {
@@ -99,15 +99,23 @@ input:checked + .slider:before {
 }
 
 .navbar {
-    background-color: #234a56;
+    background-color: #034488;
     color: black;
 }
 
 .card {
-    background-color: #fffcf6;
- 
+    background-color: #ccdde8;
+    color: #034488;
 }
 
 #Map{
     margin:1em;
+}
+
+iframe{
+   margin-right:1em;
+}
+
+#Options{
+    margin-right:1em;
 }
