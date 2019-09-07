@@ -83,6 +83,13 @@ namespace AutoMate.Controllers
             return View();
         }
 
+        public ActionResult Map()
+        {
+            ViewBag.Message = "Map";
+
+            return View();
+        }
+
         //[HttpPost]
         //[ValidateAntiForgeryToken]
         //public ActionResult EditUserDetails(UserModel model)
