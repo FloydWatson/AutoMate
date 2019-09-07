@@ -21,6 +21,16 @@ namespace AutoMate.DBFunctions
                             values (@UserID, @GivenName, @FamilyName, @MobileNumber, @EmailAddress, @Verification, @UserName, @Rating);";
             return SqlDataAccess.SaveData(sql, user);
         }
+
+        public static UserModel LoadUser(string userName)
+        {
+            string sql = @"select user_id, given_name, family_name, mobile_number, email_address, driver_verification, user_Name, rating
+                            from dbo.user_profile WHERE user_name = @userName;";
+
+            return SqlDataAccess.LoadData<UserModel>(sql);
+        }
+
+
     }
     //1,'test','test','test','test',1,'test',1
     //
