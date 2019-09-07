@@ -12,11 +12,8 @@ namespace AutoMate.Controllers
     public class MapController : Controller
     {
         // GET: Map
-        public async Task<ActionResult> Index()
-        {
-            var data = await DataLink.MakeRequest(); 
-            
-            ViewBag.Data = data;
+        public ActionResult Index()
+        {                                
             return View();
         }
     }
