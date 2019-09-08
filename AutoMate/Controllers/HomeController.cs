@@ -9,8 +9,6 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
 
-using static AutoMate.DBFunctions.UserProcessor;
-
 namespace AutoMate.Controllers
 {
     public class HomeController : Controller
