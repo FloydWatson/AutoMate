@@ -106,6 +106,13 @@ namespace AutoMate.Controllers
             return View("Login");
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(UserModel model)
+        {
+            return RedirectToAction("ProfilePage");
+        }
+
         public ActionResult Map()
         {
             ViewBag.Message = "Map";
