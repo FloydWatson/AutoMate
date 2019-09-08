@@ -42,3 +42,6 @@ The more greenhouse gases produced, the faster the world's climate heats up.
 # Dataset
 
 Auckland Traffic API <br>
+
+# Reference
+Users icon from: https://icon-library.net/icon/generic-user-icon-19.html
