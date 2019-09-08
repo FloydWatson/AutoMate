@@ -115,18 +115,5 @@ namespace AutoMate.Controllers
             data.Rating = 4.1;
             return View(data);
         }
-       
-
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult EditUserDetails(UserModel model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        return RedirectToAction("Index");
-        //    }
-
-        //    return View();
-        //}
     }
 }
