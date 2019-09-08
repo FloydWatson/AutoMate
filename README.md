@@ -30,7 +30,16 @@ This will be obtained through a system designed to increase car pooling and info
 
 # Dataset
 
-Auckland Traffic API <br>
+Auckland Traffic API
+https://api.at.govt.nz/v2/gtfs/stops/geosearch?lat={lat}&lng={lng}&distance={distance}
+<br>
 
+# Google Drive
+
+Gov Hack Shared Drive
+https://drive.google.com/drive/folders/1LsXiM1pp1nb5p5FNk_RqvBD0sJXjjT0h?usp=sharing
+
+This has records of our idea process and working process.
+Along with an images folder containing all our wireframes and prototype pages
 
 
