@@ -111,5 +111,10 @@ namespace AutoMate.Controllers
         {
             return RedirectToAction("ProfilePage");
         }
+
+        private void test()
+        {
+
+        }
     }
 }
