@@ -24,7 +24,7 @@ Underutilized cycle lanes <br>
 
 # Solution
 Create an application that allows users to better utilize the current infrastructure. <br>
-This will be obtained through a system designed to increase car pooling and inform people about other available forms of transportation. <br>
+This will be obtained through a system designed to increase car pooling and inform people about other available forms of transportation. The application consists of a car pooling "request ride" and "provide ride" section which handles the transactional part, and a public transport section. Both are displayed on a map with which the user can interact. The app also keeps track of the users carbon footprint, and the benefits of having used the app. <br>
 
 
 
