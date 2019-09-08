@@ -7,7 +7,7 @@ Pinecone
 
 # Team Memebers
 
-Floyd Watson <br>
+Floyd Watson (Team Captain) <br>
 Simon Dolley <br>
 Shannon Roberts <br>
 Kassian Houben <br>
