@@ -1,4 +1,6 @@
-﻿@{
+﻿@model AutoMate.Models.UserModel
+
+@{
     ViewBag.Title = "Index";
 }
 
@@ -13,13 +15,13 @@
             integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
             crossorigin=""></script>
     <style>
-        #Map {           
+        #Map {
             height: 60vh;
         }
 
-         #topRow {
-             margin-top: 8vh;
-         }
+        #topRow {
+            margin-top: 8vh;
+        }
     </style>
 </head>
 <body>
@@ -33,12 +35,17 @@
                 <div class="card col-sm-3" id="Details">
                     <img class="card-img-top mx-auto" src="" alt="User Profile Img">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Details</h5>
+                        <h5 class="card-title text-center" id="cardTitle">Welcome @Html.DisplayFor(model => model.GivenName)</h5>
+
                         <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi magna, aliquam nec rhoncus tincidunt, dapibus sed eros. Suspendisse turpis nibh, lobortis eget lacus eu, facilisis suscipit libero. Praesent ac ultrices lacus. Etiam nec semper est, ac cursus dui. Aliquam tristique nunc sed leo consectetur, at viverra mi pretium. Aenean et fringilla tortor, non maximus ipsum. Vivamus vitae sem ipsum. Vestibulum aliquet placerat faucibus. Maecenas eu lectus faucibus, auctor dui at, egestas sapien. Nunc id laoreet velit. Proin dui metus, semper ut maximus a, porttitor sed diam.
+                            Etiam nec semper est, ac cursus dui. Aliquam tristique nunc sed leo consectetur, at viverra mi pretium. Aenean et fringilla tortor, non maximus ipsum. Vivamus vitae sem ipsum. Vestibulum aliquet placerat faucibus. Maecenas eu lectus faucibus, auctor dui at, egestas sapien. Nunc id laoreet velit. Proin dui metus, semper ut maximus a, porttitor sed diam.
                         </p>
 
                     </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Current Rating: </b> @Html.DisplayFor(model => model.Rating)</li>
+                        <li class="list-group-item"><b>Nearest Bus Stop: </b>21 Jet Street</li>
+                    </ul>
                 </div>
 
             </section>
