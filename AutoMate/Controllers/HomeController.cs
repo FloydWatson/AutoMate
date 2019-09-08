@@ -113,14 +113,10 @@ namespace AutoMate.Controllers
             return RedirectToAction("ProfilePage");
         }
 
-        public ActionResult Map()
+
+        public ActionResult ChartView()
         {
-            ViewBag.Message = "Map";
-            UserModel data = new UserModel();
-            data.Username = "FloydWatson";
-            data.GivenName = "Floyd";
-            data.Rating = 4.1;
-            return View(data);
+            return View();
         }
     }
 }
