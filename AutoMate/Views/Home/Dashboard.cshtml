@@ -7,21 +7,53 @@
 <br />
 <h2>@ViewBag.Title.</h2>
 
+<style>
+    .gradient-3, .dropdown-mega-menu .ext-link.link-2 a, .header-right .icons .user-img .activity {
+  background-image: linear-gradient(230deg, #ffc480, #ff763b); }
+
+    .gradient-4, .sidebar-right .nav-tabs .nav-item .nav-link.active::after, .sidebar-right .nav-tabs .nav-item .nav-link.active span i::before {
+      background-image: linear-gradient(230deg, #0e4cfd, #6a8eff); }
+
+    .gradient-5 {
+      background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);  }
+
+    .gradient-6 {
+      background-image: linear-gradient(135deg, #97ABFF 10%, #034488 100%); color: #ccdde8;}
+
+    .jumbotron {background-color:#034488; color:#ccdde8;}
+
+    .forest {
+        background-image: url(https://mapio.net/images-p/37471720.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        color:white;
+        height: 800px;
+        font-size: 8em;
+
+    }
+
+</style>
+
+
+
 <div class="jumbotron text-center">
-    <h1>AutoMate Dashboard</h1>
-    <p>Automate statistics for user Floyd Watson</p>
+
+        <h1>AutoMate Dashboard</h1>
+        <p>Automate statistics for user Floyd Watson</p>
 </div>
+
 <!--First 3 widgets that are on the Dashbord to dipaly trips shared (i)total savings (ii)avg savings per day (iii)-->
 <!-- Second Line of Widgets -->
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-3 md">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center">
             <div class="card card-widget">
-                <div class="card-body gradient-3">
+                <div class="card-body gradient-5">
                     <div class="media">
-                        <span class="card-widget__icon"><i class="material-icons" style="font-size:24px;">motorcycle</i></span>
+                        
                         <div class="media-body">
+                            <span class="card-widget__icon"><i class="material-icons" style="font-size:3em;">motorcycle</i></span>
                             <h2 class="card-widget__title">37</h2>
                             <h5 class="card-widget__subtitle">Total AutoMate Trips</h5>
                         </div>
@@ -30,11 +62,11 @@
             </div>
         </div>
 
-        <div class="col-3 md">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center">
             <div class="card card-widget">
-                <div class="card-body gradient-4">
+                <div class="card-body gradient-6">
                     <div class="media">
-                        <span class="card-widget__icon"><i class="material-icons" style="font-size:24px;">cloud</i></span>
+                        <span class="card-widget__icon"><i class="material-icons" style="font-size:3em;">cloud</i></span>
                         <div class="media-body">
                             <h2 class="card-widget__title">720kg</h2>
                             <h5 class="card-widget__subtitle">Total Carbon Dioxide Saved</h5>
@@ -44,11 +76,11 @@
             </div>
         </div>
 
-        <div class="col-3 md">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center">
             <div class="card card-widget">
-                <div class="card-body gradient-4">
+                <div class="card-body gradient-5">
                     <div class="media">
-                        <span class="card-widget__icon"><i class="material-icons" style="font-size:24px;">favorite</i></span>
+                        <span class="card-widget__icon"><i class="material-icons" style="font-size:3em;">favorite</i></span>
                         <div class="media-body">
                             <h2 class="card-widget__title">32</h2>
                             <h5 class="card-widget__subtitle">Rides Provided</h5>
@@ -58,11 +90,11 @@
             </div>
         </div>
 
-        <div class="col-3 md">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center">
             <div class="card card-widget">
-                <div class="card-body gradient-9">
+                <div class="card-body gradient-6">
                     <div class="media">
-                        <span class="card-widget__icon"><i class="material-icons" style="font-size:24px;">commute</i></span>
+                        <span class="card-widget__icon"><i class="material-icons" style="font-size:3em;">commute</i></span>
                         <div class="media-body">
                             <h2 class="card-widget__title">420kg</h2>
                             <h5 class="card-widget__subtitle">Monthly Savings Made</h5>
@@ -77,19 +109,31 @@
 <br />
 <br />
 
- <!-- <div class="container">
-     <div class="row">
-         {
-             var myChart = new Chart(width: 700, height: 400)
-         .AddTitle("Totals of CO2 per month")
-         .AddSeries(chartType: "column",
-         xValue: new[] { "Jan", "Feb", "Mar", "April", "May" },
-         yValues: new[] { "132", "226", "144", "205", "456" })
-         .Write();
-         }
 
-     </div> -->
+<div class="container text-center">
+     <div class="row">
+         <img src='@Url.Action("ChartView", "Home")' alt="Chart" />
+
+     </div> 
 </div> 
+
+<br />
+<br />
+<div class="card">
+    <div class="row"></div>
+    <div class="forest">
+        <div class="container text-center">
+            <div class="row">
+                <h1 style="font-size: 1em">Congratulations!</h1>
+                <h3 style="font-size: 0.2em">Your Wise Ride Choices Were The Equivilent To Planting:</h3>
+                <br />
+                <br />
+              
+                <h1 style="font-size: 1em">47 Trees</h1>
+            </div>
+        </div>
+    </div>
 </div>
+
 
 
