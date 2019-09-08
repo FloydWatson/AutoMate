@@ -89,9 +89,13 @@ namespace AutoMate.Controllers
         public ActionResult Map()
         {
             ViewBag.Message = "Map";
-
-            return View();
+            UserModel data = new UserModel();
+            data.Username = "FloydWatson";
+            data.GivenName = "Floyd";
+            data.Rating = 4.1;
+            return View(data);
         }
+       
 
         //[HttpPost]
         //[ValidateAntiForgeryToken]
