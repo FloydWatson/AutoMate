@@ -41,13 +41,14 @@ The more greenhouse gases produced, the faster the world's climate heats up.
 
 # Dataset
 
-Auckland Traffic API: https://dev-portal.at.govt.nz/ <br>
+Auckland Traffic API <br>
 
-# Video
-Video link: https://www.youtube.com/watch?v=qYQxb3Bnp0I&feature=youtu.be <br>
+# Award Categories Entered
 
-# Google Drive
-Google Drive Link: https://drive.google.com/drive/folders/1LsXiM1pp1nb5p5FNk_RqvBD0sJXjjT0h?usp=sharing
+Public Transport for the Future
+Reducing CBD Traffic Congestion
+Best Creative use of Technology
+Most Artistic use of Data
 
 # Reference
 Users icon from: https://icon-library.net/icon/generic-user-icon-19.html
