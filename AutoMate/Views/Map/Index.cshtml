@@ -22,6 +22,23 @@
         #topRow {
             margin-top: 8vh;
         }
+
+       #userIconImg {
+           border-radius: 50%;
+           width: 6.0em;
+           height: 6.0em;
+       }
+
+       #cardTitle {
+           font-size: 1.5em;
+           font-weight:400;
+       }
+
+       #titleImgDiv{
+          text-align:center;
+          padding-top: 0.5em;
+           
+       }
     </style>
 </head>
 <body>
@@ -33,18 +50,16 @@
 
                 </div>
                 <div class="card col-sm-3" id="Details">
-                    <img class="card-img-top mx-auto" src="" alt="User Profile Img">
-                    <div class="card-body">
-                        <h5 class="card-title text-center" id="cardTitle">Welcome @Html.DisplayFor(model => model.GivenName)</h5>
-
-                        <p class="card-text">
-                            Etiam nec semper est, ac cursus dui. Aliquam tristique nunc sed leo consectetur, at viverra mi pretium. Aenean et fringilla tortor, non maximus ipsum. Vivamus vitae sem ipsum. Vestibulum aliquet placerat faucibus. Maecenas eu lectus faucibus, auctor dui at, egestas sapien. Nunc id laoreet velit. Proin dui metus, semper ut maximus a, porttitor sed diam.
-                        </p>
-
+                    <div id="titleImgDiv">
+                        <img class="card-img-top mx-auto" id="userIconImg" src="~/Images/GenericUserIcon.jpg" alt="User Profile Img">
+                        <h5 class="card-title" id="cardTitle">Welcome @Html.DisplayFor(model => model.GivenName)</h5>
                     </div>
+                    
+
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><b>Current Rating: </b> @Html.DisplayFor(model => model.Rating)</li>
                         <li class="list-group-item"><b>Nearest Bus Stop: </b>21 Jet Street</li>
+                        <li class="list-group-item"><b>Total Carbon Saved: </b> 720kg</li>
                     </ul>
                 </div>
 
