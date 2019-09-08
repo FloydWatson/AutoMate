@@ -46,8 +46,7 @@ namespace AutoMate.Controllers
         public ActionResult SignUp(UserModel model)
         {
             if (ModelState.IsValid)
-            {
-                CreateUser(model);
+            {                
                 return RedirectToAction("Index");
             }
 

@@ -1,4 +1,7 @@
-﻿<h1>Map</h1>
+﻿@{
+    ViewBag.Title = "Index";
+}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,13 +12,59 @@
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
             integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
             crossorigin=""></script>
+    <style>
+        #Map {           
+            height: 60vh;
+        }
+
+         #topRow {
+             margin-top: 8vh;
+         }
+    </style>
 </head>
 <body>
-    <div id="mapid"></div>
+
+    <main>
+        <div class="row" id="topRow">
+            <section id="MapArea">
+                <div class="col-sm-8" id="Map">
+
+                </div>
+                <div class="card col-sm-3" id="Details">
+                    <img class="card-img-top mx-auto" src="" alt="User Profile Img">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Details</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nisi magna, aliquam nec rhoncus tincidunt, dapibus sed eros. Suspendisse turpis nibh, lobortis eget lacus eu, facilisis suscipit libero. Praesent ac ultrices lacus. Etiam nec semper est, ac cursus dui. Aliquam tristique nunc sed leo consectetur, at viverra mi pretium. Aenean et fringilla tortor, non maximus ipsum. Vivamus vitae sem ipsum. Vestibulum aliquet placerat faucibus. Maecenas eu lectus faucibus, auctor dui at, egestas sapien. Nunc id laoreet velit. Proin dui metus, semper ut maximus a, porttitor sed diam.
+                        </p>
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <div class="row">
+            <section id="FilterOptions">
+                <select class="form-control col-sm-4" id="Options">
+                    <option>Car Pool</option>
+                    <option>Buses</option>
+                    <option>Cycle</option>
+
+                </select>
+                <button type="submit" class="btn btn-primary" value="Send">Continue</button>
+            </section>
+
+        </div>
+
+
+
+        <section></section>
+    </main>
+
     <script>
 
 
-        var map = L.map('mapid').setView([-36.84, 174.76], 12);
+        var map = L.map('Map').setView([-36.8485, 174.7633], 15);
         L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         }).addTo(map);
@@ -23,17 +72,12 @@
         @for (int i = 0; i < ViewBag.Data.Count; i++)
         {
             <text>
-                var marker = L.marker([@ViewBag.Data[i].stop_lat, @ViewBag.Data[i].stop_lon]).addTo(map)        
+                var marker = L.marker([@ViewBag.Data[i].stop_lat, @ViewBag.Data[i].stop_lon]).addTo(map)
                 marker.bindPopup("@ViewBag.Data[i].stop_name")
             </text>
-        }       
+        }
 
     </script>
     <input type="button" onclick="map.invalidateSize()" />
 </body>
 </html>
-<style>
-    #mapid {
-        height: 500px
-    }
-</style>
