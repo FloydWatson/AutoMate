@@ -1,5 +1,5 @@
 # AutoMate 
-A App to calculate your carbon footprint and to encourage alternate
+AutoMate is an App to calculate your carbon footprint and to encourage alternate transport options. It ultimately aims to reduce this to help combat climate change by reducing pollution, reduce traffic congestion in the CBD and motivate the use of public transportation, which is currently severley underutelised.
 
 # Team Name
 
@@ -16,16 +16,16 @@ Jesse Gray <br>
 Travis Falkenberg <br>
 
 # Problem
-Traffic congestion is increasing <br>
-People under utilizing space in their vehicles <br>
-Underutilized public transport <br>
-Underutilized cycle lanes <br>
++ Traffic congestion is increasing
++ People under utilizing space in their vehicles
++ Underutilized public transport
++ Underutilized cycle lanes
 
 
 # Solution
 Create an application that allows users to better utilize the current infrastructure. <br>
 This will be obtained through a system designed to increase car pooling and inform people about other available forms of transportation. <br>
-
+Motivation will come in the form of a savings calculation, both in terms of money and carbon emmision.
 
 
 # Dataset
