@@ -45,10 +45,10 @@ Auckland Traffic API <br>
 
 # Award Categories Entered
 
-Public Transport for the Future
-Reducing CBD Traffic Congestion
-Best Creative use of Technology
-Most Artistic use of Data
+Public Transport for the Future <br>
+Reducing CBD Traffic Congestion <br>
+Best Creative use of Technology <br>
+Most Artistic use of Data <br>
 
 # Reference
 Users icon from: https://icon-library.net/icon/generic-user-icon-19.html
